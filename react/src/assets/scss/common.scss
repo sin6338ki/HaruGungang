@@ -27,11 +27,7 @@ Header 6
     }
 
     .navbar-brand {
-<<<<<<< HEAD:templete/src/assets/scss/common.scss
-        line-height: 60px;
-=======
         line-height: 20px;
->>>>>>> ksy:react/src/assets/scss/common.scss
     }
 }
 
@@ -185,11 +181,7 @@ Title
 *******************/
 
 .title {
-<<<<<<< HEAD:templete/src/assets/scss/common.scss
-    margin: 20px 0 15px;
-=======
     margin: 10px 0 13px;
->>>>>>> ksy:react/src/assets/scss/common.scss
 
 
 }
@@ -785,8 +777,6 @@ Buttons
      gap : 4%;
  }
 
-<<<<<<< HEAD:templete/src/assets/scss/common.scss
-=======
  //preview 버튼 마우스 오버시 설명 나오게 - 1
  #tooltip .tooltipText1{
     visibility: hidden;
@@ -843,7 +833,6 @@ Buttons
     opacity: 1;
   }
 
->>>>>>> ksy:react/src/assets/scss/common.scss
  //설문조사 > 성별 선택 다음버튼
  .nextBtn {
     display: flex;
@@ -1768,15 +1757,9 @@ Modal in center
 
 //프리뷰에 설문/기능성 버튼
 .preview-btn{
-<<<<<<< HEAD:templete/src/assets/scss/common.scss
-    margin-top: 50%;
-    width: 50%;
-    height: 150px;
-=======
     margin-top: 60%;
     width: 40%;
     height: 130px;
->>>>>>> ksy:react/src/assets/scss/common.scss
     gap : 20px;
 }
 
@@ -1785,17 +1768,11 @@ Modal in center
     font-family: 'MBC1961GulimM';
 }
 
-<<<<<<< HEAD:templete/src/assets/scss/common.scss
-//
-.nextBtn {
-    margin-right: 0%;
-=======
 
 
 //
 .nextBtn {
     align-items: center;
->>>>>>> ksy:react/src/assets/scss/common.scss
     
 }
 
@@ -1892,9 +1869,6 @@ Modal in center
 //
 .card-img-top {
     background-color: transparent;
-<<<<<<< HEAD:templete/src/assets/scss/common.scss
-}
-=======
 
 }
 
@@ -2005,4 +1979,3 @@ Modal in center
     box-shadow: 0 0 0 .2rem rgba(0,123,255,.25);
   }
   .text-dark { color: #343a40!important; }
->>>>>>> ksy:react/src/assets/scss/common.scss
