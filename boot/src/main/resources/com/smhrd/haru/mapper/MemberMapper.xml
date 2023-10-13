@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="com.smhrd.haru.mapper.MemberMapper">
+     <select id="memberCheck" parameterType="com.smhrd.haru.domain.HaruMember">
+		select * from harumember where user_id=#{user_id}
+	</select>  	
+	
+	<insert id="join" parameterType="com.smhrd.haru.domain.HaruMember">
+		insert into harumember (user_id, user_pw, user_gender, user_age, user_type) values (#{user_id}, #{user_pw}, #{user_gender}, #{user_age}, #{user_type})
+	</insert>
+	
+	<select id="login" parameterType="com.smhrd.haru.domain.HaruMember" resultType="com.smhrd.haru.domain.HaruMember">
+		select * from harumember where user_id=#{user_id} and user_pw=#{user_pw}
+	</select>
+	
+	<select id="snsMemberCheck" parameterType="com.smhrd.haru.domain.HaruMember">
+		select * from harumember where sns_user_id=#{sns_user_id}
+	</select>
+	
+  	<insert id="snsJoin" parameterType="com.smhrd.haru.domain.HaruMember">
+		insert into harumember (user_type, sns_user_id, sns_user_name, sns_user_email) values (#{user_type}, #{sns_user_id}, #{sns_user_name}, #{sns_user_email})
+	</insert>	
+	
+	<select id="snsLogin" resultType="com.smhrd.haru.domain.HaruMember">
+		select * from harumember where sns_user_id=#{sns_user_id}
+	</select>
+	
+	<select id="memberInfo" resultType="com.smhrd.haru.domain.HaruMember">
+		select * from harumember where user_id=#{loginId} or sns_user_id=#{loginId}
+	</select>
+	
+	<update id="update" parameterType="com.smhrd.haru.domain.HaruMember">
+		update harumember set user_id=#{user_id}, user_pw=#{user_pw}, user_gender=#{user_gender}, user_age=#{user_age}, user_type=#{user_type} where user_id=#{user_id}
+	</update>
+	
+	<delete id="delete">
+		delete from harumember where user_id=#{id}
+	</delete>
+	
+	<insert id="snsNaverJoin" parameterType="com.smhrd.haru.domain.HaruMember">
+		insert into harumember (user_type, sns_user_id, sns_user_name, sns_user_email, sns_user_age, sns_user_gender) values (#{user_type}, #{sns_user_id}, #{sns_user_name}, #{sns_user_email}, #{sns_user_age}, #{sns_user_gender})
+	</insert>
+   
+   
+     <!--
+     <select id="memberCheck" parameterType="com.smhrd.haru.domain.HaruMember">
+        select * from harumember where sns_user_id = #{sns_user_id}
+     </select>
+  
+     <insert id="naverLogin" parameterType="com.smhrd.haru.domain.HaruMember">
+        insert into harumember (user_type , sns_user_id , sns_user_name , sns_user_email , sns_user_age , sns_user_gender) values (#{user_type},#{sns_user_id},#{sns_user_name},#{sns_user_email},#{sns_user_age},#{sns_user_gender})
+     </insert>
+     
+     <insert id="kakaoLogin" parameterType="com.smhrd.haru.domain.HaruMember">
+        insert into harumember (user_type , sns_user_id , sns_user_name , sns_user_email) values (#{user_type},#{sns_user_id},#{sns_user_name},#{sns_user_email})
+     </insert>
+     
+     <select id="kakaoLogin2" parameterType="com.smhrd.haru.domain.HaruMember" resultType="com.smhrd.haru.domain.HaruMember">
+        select * from harumember where sns_user_id = #{sns_user_id}
+     </select>
+     -->
+  </mapper>

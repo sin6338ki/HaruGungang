@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="com.smhrd.haru.mapper.InfoMapper">
+  	<select id="nutriDetail" resultType="com.smhrd.haru.domain.TblNutritionDetail">
+  		select * from tbl_nutritionfact where nutri_name = #{nutri_name}
+  	</select>
+  	
+  	<select id="nutriFaq" resultType="com.smhrd.haru.domain.TblNutriFaq">
+  		select * from tbl_faq where nutri_name=#{nutri_name}
+  	</select>
+  	
+  	  	<select id="productDetail" resultType="com.smhrd.haru.domain.TblProductDetail">
+  		select * from tbl_details where productId=#{productId}
+  	</select>
+   </mapper>

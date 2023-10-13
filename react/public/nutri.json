@@ -1,0 +1,89 @@
+{
+    "nutrilist": [
+        {
+            "no" : 1,
+            "name": "오메가3",
+            "function": "blood",
+            "intakeMin": 0.5, 
+            "intakeMax": 4,
+            "unit" : "g"
+        },
+        {
+            "no" : 2,
+            "name": "유산균",
+            "function": "intestine",
+            "intakeMin": 100000000, 
+            "intakeMax": 1000000000,
+            "unit" : "CFU"
+        },
+        {
+            "no" : 3,
+            "name": "밀크씨슬",
+            "function": "liver",
+            "intakeMin":130, 
+            "intakeMax":420,
+            "unit" : "mg"
+        },
+        {
+            "no" : 4,
+            "name": "루테인",
+            "function": "eye",
+            "intakeMin": 10, 
+            "intakeMax": 20,
+            "unit" : "mg"
+        },
+        {
+            "no" : 5,
+            "name": "비타민C",
+            "function": "antioxidant",
+            "intakeMin": 500, 
+            "intakeMax": 2000,
+            "unit" : "mg"
+        },
+        {
+            "no" : 6,
+            "name": "코엔자임Q10",
+            "function": "blood",
+            "intakeMin":90, 
+            "intakeMax":100,
+            "unit" : "mg"
+        },
+        {
+            "no" : 7,
+            "name": "보스웰리아",
+            "function": "bone",
+            "intakeMin":100, 
+            "intakeMax":250,
+            "unit" : "mg"
+        },
+        {
+            "no" : 8,
+            "name": "글루코사민",
+            "function": "bone",
+            "intakeMin":1.5, 
+            "intakeMax":"",
+            "unit" : "g"
+        },
+        {
+            "no" : 9,
+            "name": "칼슘",
+            "function": "bone",
+            "intakeMin":700, 
+            "intakeMax":3000,
+            "unit" : "mg"
+        },
+        {
+            "no" : 10,
+            "name": "비타민D",
+            "function": "bone",
+            "intakeMin": 25, 
+            "intakeMax": 50,
+            "unit": "㎍"
+        },
+        {
+            "no" : 11,
+            "name": "철분",
+            "function": "blood",
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.smhrd.haru.mapper.WishMapper">
+	<insert id="addWishList">
+		insert into tbl_user_wishlist (user_id, product_id) values (#{user_id}, #{product_id})
+	</insert>
+	
+	<select id="wishlist" resultType="com.smhrd.haru.domain.TblOutputWishlist">
+	select b.product_id, c.detail_url, c.detail_name, c.detail_price, c.pack_unit, c.nutri_name, c.manufacturer, c.day_times, c.day_many, c.day_when, c.bf_af_meal, c.intake_precaution, c.shape, c.functionality, c.img from tbl_user a join tbl_user_wishlist b on a.user_id = b.user_id join tbl_details c on b.product_id = c.productid where a.user_id = #{user_id}
+	</select>
+	
+	<select id="isList">
+		select count(*) from tbl_user_wishlist where user_id = #{user_id} and product_id = #{product_id}
+	</select>
+	
+	<delete id="deleteList">
+		delete from tbl_user_wishlist where user_id=#{user_id} and product_id = #{product_id}
+	</delete>
+	
+	<select id="compareList" resultType="com.smhrd.haru.domain.TblProductDetail">
+		select * from tbl_details where productid = #{id}
+	</select>
+	
+	
+  </mapper>

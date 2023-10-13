@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <!-- mapper는 파일이 여러개일 수 있음 이를 구분하기 위해 namespace 작성
+  namespace는 mapper 있는 경로 그대로 작성 -->
+  <mapper namespace="com.smhrd.haru.mapper.SurveyMapper">
+  	<select id="recSurvey" resultType="com.smhrd.haru.domain.TblNutriFunc">
+  		select nutri_name, func_initial from tbl_nutri_func where func_initial in (#{interest1}, #{interest2}, #{interest3})
+  	</select>
+  	
+  	<select id="recBasic" resultType="com.smhrd.haru.domain.TblNutriRec">
+		  select b.gender, b.age_group, c.nutri_name from tbl_nutri_rec_vol a left join TBL_NUTRI_REC_FILTER b on a.rec_target_seq = b.rec_target_seq left join tbl_nutritionfact c on a.nutri_seq=c.nutri_seq where (b.gender=#{gender} and b.age_group=#{ageRange})
+  	</select>
+  </mapper>
