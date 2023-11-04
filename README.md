@@ -26,6 +26,7 @@ https://www.youtube.com/watch?v=mRnVtz-5ddc
   * 리액트 템플릿 적용 : 구 문법 적용에서 최신 문법 적용 (react-router-dom 5version >> 6version)
   * front-end & back-end
     * 설문조사 페이지 : 설문조사 진행, 결과(영양성분 추천) 기능 및 화면 구현
+     * 사용자에게 연령, 성별을 입력받고, 네이버 데이터랩에서 제공하는 데이터를 활용하여 해당 연령, 성별대가 많이 검색한 영양성분 3가지를 추천함  
 ![image](https://github.com/sin6338ki/HaruGungang/assets/130349912/adc9b808-9972-4007-a37e-7d7a38281b5f)
 
     * 메인 페이지 : 성별, 연령 선택 필터 기능 구현, 필터 선택 후 성별/연령별 추천 영양 성분 파이차트로 보여주는 기능 구현
@@ -38,6 +39,8 @@ https://www.youtube.com/watch?v=mRnVtz-5ddc
 ![image](https://github.com/sin6338ki/HaruGungang/assets/130349912/4a74e051-3b3c-41e9-b00b-09f93ee54593)
 
     * 위시 리스트 : DB에 저장된 위시리스트를 불러와 카드 형태로 화면 구현, 각 제품을 기능성별로 분류하여 배치
+     * 사용자가 제품 찜하기를 클릭했을 때 찜목록에 해당 제품을 저장
+     * 데이터베이스에 찜목록 엔터티를 추가하고, 사용자의 id와 제품 id만을 저장하여 연관관계를 활용해 제품 테이블에서 제품 정보를 조회할 수 있도록 하였음 
 ![image](https://github.com/sin6338ki/HaruGungang/assets/130349912/bfb946f2-9baf-47a6-8ca5-decff25d3c38)
 
     * 동일 영양성분군 비교하기 & 서로 다른 영양성분 종합 정보 조회 : 위시리스트에서 체크박스로 선택한 1~3개의 상품을 하나의 페이지에서 비교할 수 있도록 화면 구현, DB에 저장된 정보를 recharts 라이브러리로 구현할 수 있도록 데이터 가공, recharts 및 테이블 활용하여 제품 비교 페이지 구현
